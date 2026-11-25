@@ -136,7 +136,7 @@ object TorrentEngine {
 
     private fun onAdded(alert: AddTorrentAlert) {
         if (alert.error().isError) {
-            Log.w(TAG, "Add failed: ${alert.error().message()}")
+            Log.w(TAG, "Add failed: ${alert.error()}")
             return
         }
         val h = alert.handle()
